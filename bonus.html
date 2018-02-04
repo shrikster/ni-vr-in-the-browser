@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="client.js"></script>
+	</head>
+	<body>
+		<a-scene>
+      <a-assets>
+				<img id="logo" src="https://cdn.glitch.com/c51ff6ef-01b6-490c-a56b-085283e3d23f%2Fnodeconf-logo.jpg?1509969643435">
+			</a-assets>
+      <a-sky src="#group" radius="10" sky-colors></a-sky>
+      <a-entity light="color: #AFA; intensity: 1.5" position="0 0 6">
+      <a-animation attribute="position"
+               dur="5000"
+               from="0 0 6"
+               to="6 0 0"
+               easying="ease-in-out"
+               direction="alternating"
+               repeat="indefinite"></a-animation>
+      </a-entity>
+			<a-box width="2.5" height="2.5" depth="2.5" position="-3.5 2 -5" rotation="0 0 45" src="#logo" >
+				<a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
+			</a-box>
+      <a-camera position="0 1.8 0">
+				<a-cursor color="#1783c6"></a-cursor>
+      </a-camera>
+		</a-scene>
+	</body>
+</html>
